@@ -46,9 +46,9 @@ class MakeItRainState extends State<MakeItRain> {
             new Expanded(
               child: new Center(
                   child: new Text(
-                "Money! $_moneyCounter",
+                "Money! \n \$$_moneyCounter",
                 style: new TextStyle(
-                    color: Colors.greenAccent,
+                    color: _moneyCounter > 1000 ? Colors.blueAccent : Colors.red,
                     fontWeight: FontWeight.w800,
                     fontSize: 46.9),
               )),
@@ -56,7 +56,7 @@ class MakeItRainState extends State<MakeItRain> {
             new Expanded(
                 child: new Center(
                     child: new FlatButton(
-                      color: Colors.lightGreen,
+                        color: Colors.greenAccent.shade400,
                         textColor: Colors.white,
                         onPressed: _rainMoney,
                         child: new Text(
